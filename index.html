@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./login.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #000;
+        }
+
+        h2 {
+            font-size: 30px;
+            color: #fff;
+            text-align: center;
+        }
+
+        .wrapper {
+            position: relative;
+            width: 400px;
+            height: 500px;
+            background: #000;
+            box-shadow: 0 0 50px #0ef;
+            border-radius: 20px;
+            padding: 40px;
+        }
+
+        .form-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+
+        .input-group {
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 10px 10px;
+            font-size: 16px;
+            background: none;
+            border: none;
+            border-bottom: 2px solid #fff;
+            color: #fff;
+            outline: none;
+        }
+
+        .input-group label {
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 10px 0;
+            pointer-events: none;
+            font-size: 16px;
+            color: #aaa;
+            transition: 0.3s;
+        }
+
+        .input-group input:focus ~ label,
+        .input-group input:valid ~ label {
+            top: -20px;
+            left: 0;
+            color: #0ef;
+            font-size: 12px;
+        }
+
+        .remember {
+            color: #fff;
+            margin-bottom: 30px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #0ef;
+            color: #000;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        button:hover {
+            background: #0c9;
+        }
+
+        .signUp-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .signUp-link a {
+            color: #0ef;
+            text-decoration: none;
+        }
+
+        .signUp-link a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="form-wrapper sign-in">
+            <form action="login_process.php" method="POST">
+                <h2>Login</h2>
+                <div class="input-group">
+                    <input type="text" id="username" name="username" required>
+                    <label for="username">Username</label>
+                </div>
+
+                <div class="input-group">
+                    <input type="password" id="password" name="password" required>
+                    <label for="password">Password</label>
+                </div>
+
+                <div class="remember">
+                    <label for="remember"><input type="checkbox" id="remember" name="remember"> Remember me</label>
+                </div>
+
+                <button type="submit"><a href="home.html">Login</a></button>
+                <div class="signUp-link">
+                    <p>Don't have an account? <a href="Registration.html" class="signUpBtn-link">Sign Up</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
